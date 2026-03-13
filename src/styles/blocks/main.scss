@@ -1,0 +1,19 @@
+.main {
+  position: relative;
+  z-index: 2;
+  background-color: $second-text-color;
+  margin-bottom: 310px;
+
+  @include on-tablet {
+    margin-bottom: 572px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 709px;
+  }
+
+  &__content {
+    display: grid;
+    row-gap: 24px;
+  }
+}
