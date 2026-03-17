@@ -8,6 +8,35 @@
     padding-block: 36px;
   }
 
+  &__phone-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    @include on-desktop {
+      &:hover {
+        .top-bar__text-info {
+          opacity: 1;
+          transform: translateX(0);
+          pointer-events: all;
+        }
+      }
+    }
+  }
+
+  &__text-info {
+    color: $main-text-color;
+    position: absolute;
+    right: calc(100% + 8px);
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(100%);
+    pointer-events: none;
+  }
+
   &__icons {
     display: flex;
     gap: 24px;
